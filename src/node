@@ -1,0 +1,27 @@
+1..(req,res)
+    req: viếT tắt của request ( yêu cầu)
+        + Chứa các thông tin được gửi lên sever
+    
+    res: response  (phản hồi)
+2... query parameters  (thường sử dụng với phương thức get)
+
+    Với phương thức get ví dụ đường dẫn 
+    http://localhost:3000/?q=f8%lap%trinh&author=duylinh&name=linh
+
+    Trước đường dẫn là ?
+    Sau đó quy ước với key = value ngăn nhau bằng dấu &
+    Dấu cách tính bằng %20
+    dung morgan để dubug
+    voi get dung req.query
+
+3.. với method post thì sử dụng middleware đã 
+tích hợp sẵn trong express
+goi la req.body
+
+
+
+4.MCV
+với file site.js để thực hiện nhưng trang mà
+không năm ở tài nguyên cụ thể hay nói cách khác
+là chỉ có 1 trang ( home, contact, search)
+ copy lại trang news.js và sửa tên
