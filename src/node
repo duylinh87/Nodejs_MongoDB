@@ -57,4 +57,6 @@ goi la req.body
       + const Schema = mongoose.Schema; đây là lược đồ trong mongoose    
 
 
-
+6. Lấy dự liệu từ db trả về view
+   +Chú ý là làm theo thư viện https://handlebarsjs.com/
+   + Viết 1 fucntion trong unil xử lý riêng vì tính bảo mật mongoose không cho truy xuất trực tiếp
