@@ -1,3 +1,20 @@
+
+"devDependencies": {   các phần cài đặt
+    "express": "^4.17.1",  thư viện hộ trợ node js
+    "nodemon": "^2.0.12" để chạy tự động file đầu nodejs , để debug nodejs
+
+    "node-sass": "^6.0.1"  Để chuyển chuyển file css được sinh ra phải scss vào thư mục nào trong nodejs
+    "morgan": "^1.10.0",  Để quan sát được các request từ cliel lên node sever
+
+    "express-handlebars": "^5.3.3",  template engie hadlebars của express
+    "mongoose": "^5.13.6",   thư viện kếT nối mogodb và nodejs
+
+}
+
+
+
+
+
 1..(req,res)
     req: viếT tắt của request ( yêu cầu)
         + Chứa các thông tin được gửi lên sever
@@ -19,9 +36,25 @@ tích hợp sẵn trong express
 goi la req.body
 
 
-
 4.MCV
-với file site.js để thực hiện nhưng trang mà
-không năm ở tài nguyên cụ thể hay nói cách khác
-là chỉ có 1 trang ( home, contact, search)
- copy lại trang news.js và sửa tên
+        với file site.js để thực hiện nhưng trang mà
+        không năm ở tài nguyên cụ thể hay nói cách khác
+        là chỉ có 1 trang ( home, contact, search)
+        copy lại trang news.js và sửa tên
+
+
+        trong index.js
+        1 route(app) ---> chạy từ function trong const route = require("./routers");
+        2 ===> siteRouter ---> chạy từ file site.js trong thư mục routers
+        trong file site.js sử dựng phương thức const router = express.Router();
+        được chạy sẵn trong express để đình hướng tuyến đường cho site dù còn nhiều 
+        trang nhỏ bên trong
+        3-----> chạy tiếp siteController trong controllers
+        4====> trả về view 
+5. phần kết nối và cài đặt Mogodb
+    +Cài xong Mogodb chú ý copy cái mã cài đặt
+    +Phải có bên thứ 3 để conect là mongoose (https://github.com/Automattic/mongoose) 
+      + const Schema = mongoose.Schema; đây là lược đồ trong mongoose    
+
+
+
