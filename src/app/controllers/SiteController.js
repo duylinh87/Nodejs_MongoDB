@@ -15,4 +15,3 @@ class SiteController {
   }
 }
 module.exports = new SiteController();
-//xuat doi tuong khoi tao

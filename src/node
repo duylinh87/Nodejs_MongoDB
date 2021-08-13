@@ -60,3 +60,26 @@ goi la req.body
 6. Lấy dự liệu từ db trả về view
    +Chú ý là làm theo thư viện https://handlebarsjs.com/
    + Viết 1 fucntion trong unil xử lý riêng vì tính bảo mật mongoose không cho truy xuất trực tiếp
+
+
+7. Làm trang chi tiết khoá học
+  +  tạo slug cho đường dẫn courses (tạo thêm trường slug trong db)
+       +b1: tạo file courese.js trong routers
+       +b2: tạo file CourseController.js trong controllers
+       +b3: Đẩy vào index.js trong routers
+  + Xử lý login tìm chuỗi slug trên url để truy vấn vào db lấy ra thông tin trang chi tiết
+      + dựa vào thư viện mongoose 
+      +b1: lấy param trên thanh url 
+        đã học ở bài get ta dùng phuong thức req.params.slug (
+            với phương thức post là req.body...)
+        )  
+       + dùng thằng req.params.slug chọc vào db bằng mongoose
+        vào trang https://mongoosejs.com/docs/api.html#model_Model.findOnemongoose.js 
+        tìm mục queries 
+        +/// chú ý hamgf findOne là 1 promise lên để hứng kết quả ta sử
+        // dụng then(function callback).catch(bắt lỗi)
+8. taọ mới 1 khoá học
+ +chú ý thêm trường vào trong file model (ví dụ video.id )
+ Nếu không thêm trường định nghĩa đó thì db không hiểu để thêm vào dc
+ + khi thêm 2 khoá học trùng nhau thì ta cần thêm định nghĩa nữa sử dụng
+ thuộc tính unique:true (tự thêm chuổi ngẫu nhiên để 2 bị trùng)
