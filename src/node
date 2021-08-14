@@ -9,6 +9,7 @@
     "express-handlebars": "^5.3.3",  template engie hadlebars của express
     "mongoose": "^5.13.6",   thư viện kếT nối mogodb và nodejs
 
+    "mongoose-slug-generator": "^1.0.4", de phuc vu lam slug khi ta them khoa hoc moi
 }
 
 
@@ -83,3 +84,5 @@ goi la req.body
  Nếu không thêm trường định nghĩa đó thì db không hiểu để thêm vào dc
  + khi thêm 2 khoá học trùng nhau thì ta cần thêm định nghĩa nữa sử dụng
  thuộc tính unique:true (tự thêm chuổi ngẫu nhiên để 2 bị trùng)
+ + sử dụng mongoosejs để thực hiệN phuong thức save vào db
+ + Sử dụng thư viện express để chuyển hướng trang 

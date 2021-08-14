@@ -18,6 +18,18 @@ class CourseController {
       })
       .catch(next);
   }
+  create(req, res, next) {
+    res.render("courses/create");
+  }
+  store(req, res, next) {
+    // res.json(req.body); // dya la phan yeu cau duoc gui len sever
+    const formData = req.body;
+    formData.img = `https://img.youtube.com/vi/${req.body.videoID}/sddefault.jpg`;
+    const course = new Course(formData);
+    course.save().then(() => res.redirect("/"));
+    /// phuong thuc course.save() trong moogoose tra ve 1 promise vi the dung then de dieu huong ve trang chu
+    // phuong thuc dieu huong xem o express
+  }
 }
 module.exports = new CourseController();
 

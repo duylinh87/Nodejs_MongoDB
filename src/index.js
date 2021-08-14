@@ -26,11 +26,12 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "/resources/views"));
 
 console.log("path", __dirname);
-// Routers innit (khoi tao tuyen duong)
-route(app);
+
 // connect db
 db.connect();
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+// Routers innit (khoi tao tuyen duong)
+route(app);

@@ -2,7 +2,7 @@
     <div class="row ">
             
         {{#each courses}}  
-            <div class="col-ms-6 col-md-4">
+            <div class="col-ms-6 col-md-4 mb-5">
                 <div class="card">
                     <a href="/courses/{{this.slug}}">
                       <img class="card-img-top" src="{{this.img}}" alt="Card image cap">
@@ -17,6 +17,8 @@
                     </div>
                 </div>
             </div>
+
+
         {{/each}}
     </div>
 </div>
