@@ -5,5 +5,5 @@ const meController = require("../app/controllers/MeController");
 router.get("/stored/courses", meController.storedCourses);
 router.get("/stored/courses/edit/:_id", meController.editCourses);
 router.post("/stored/courses/:_id", meController.updateCourses);
-
+router.post("/stored/courses/delete/:_id", meController.deleteCourses);
 module.exports = router;

@@ -14,6 +14,7 @@ class MeController {
       )
       .catch(next);
   }
+  // [PUT]/me/stored/courses/edit/:id
   editCourses(req, res, next) {
     Course.findOne({
       _id: req.params._id,
@@ -25,6 +26,7 @@ class MeController {
       )
       .catch(next);
   }
+  // [PUT]/me/stored/courses/update/:id
   updateCourses(req, res, next) {
     Course.updateOne(
       {
@@ -35,18 +37,16 @@ class MeController {
       .then(() => res.redirect("/me/stored/courses"))
       .catch(next);
   }
-
-  // show(req, res, next) {
-  //   Course.findOne({
-  //     slug: req.params.slug,
-  //   })
-  //     .then((course) => {
-  //       // res.json(course);
-  //       res.render("courses/show", {
-  //         course: mutipleToObject(course),
-  //       });
-  //     })
-  //     .catch(next);
-  // }
+  // [PUT]/me/stored/courses/delete/:id
+  deleteCourses(req, res, next) {
+    Course.deleteOne(
+      {
+        _id: req.params._id,
+      },
+      req.body
+    )
+      .then(() => res.redirect("/me/stored/courses"))
+      .catch(next);
+  }
 }
 module.exports = new MeController();

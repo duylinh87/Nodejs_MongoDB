@@ -4,8 +4,7 @@ const {
   mutipleToObject,
 } = require("../../until/mongoose");
 class CourseController {
-  // [GET]/news
-
+  // [GET]/courses/:slug
   show(req, res, next) {
     Course.findOne({
       slug: req.params.slug,
@@ -18,9 +17,11 @@ class CourseController {
       })
       .catch(next);
   }
+  // [GET]//courses/create
   create(req, res, next) {
     res.render("courses/create");
   }
+
   store(req, res, next) {
     // res.json(req.body); // dya la phan yeu cau duoc gui len sever
     const formData = req.body;
