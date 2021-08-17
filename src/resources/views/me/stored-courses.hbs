@@ -1,0 +1,36 @@
+
+<h3 class ="text-center mt-2"> Danh sách Bài Hát</h3>
+<table class="table music-box">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Img</th>
+      <th scope="col">Name</th>
+      <th scope="col">Time up</th>
+      <th scope="col">Listen To Music</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each courses}}  
+        <tr>
+            <th scope="row">{{sum @index 1}}</th>
+            <th>
+              <img src={{this.img}} alt="" class="img-small">
+            </th>
+            <td>{{this.name}}  </td>
+            <td>{{this.createdAt}}</td>
+            <td>
+              <a href="/courses/{{this.slug}}">Nghe Nhạc</a>
+            </td>
+            <td>
+              <a href="/me/stored/courses/edit/{{this._id}}">Sửa</a>
+            </td>
+            <td>
+              <a href="/me/courses/delete/{{this._id}}">Xoá</a>
+            </td>
+        </tr>
+    {{/each }}   
+  </tbody>
+</table>    

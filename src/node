@@ -86,3 +86,7 @@ goi la req.body
  thuộc tính unique:true (tự thêm chuổi ngẫu nhiên để 2 bị trùng)
  + sử dụng mongoosejs để thực hiệN phuong thức save vào db
  + Sử dụng thư viện express để chuyển hướng trang 
+
+ 9.Phần sửa khoá học
+ + chú ý khi forech ra danh sách thì số thứ tự ta viết hàm helper trong express-hadlebars chứ không phải áp
+ dụng trong handlebars ( hàm này được viết trong index.js) sử dụng {{ sum @index 1}}

@@ -9,6 +9,7 @@ const Course = new Schema(
     description: { type: String, maxLength: 600 },
     img: { type: String, maxLength: 255 },
     videoID: { type: String },
+    Lyric: { type: String },
     slug: { type: String, slug: "name" },
   },
   {

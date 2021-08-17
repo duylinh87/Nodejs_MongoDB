@@ -1,0 +1,25 @@
+    <h2 class ="center m-2" style="text-align: center;">
+                Sửa Nội Dung
+         </h2>
+<form class= "mt-2" method = 'POST' action="/me/stored/courses/{{courses._id}}?_method = PUT">
+    <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" class="form-control" value="{{courses.name}}" id="name" name = "name" placeholder="Name">
+        
+    </div>
+        <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" class="form-control" value="{{courses.description}}" id="description" name = "description" placeholder="description">
+        
+    </div>
+
+    <div class="form-group">
+        <label for="videoID">videoID</label>
+        <input type="text" class="form-control" value="{{courses.videoID}}" id="videoID" name = "videoID" placeholder="videoID">
+    </div> 
+    <div class="form-group">
+            <label for="Lyric">Lyric</label>
+            <textarea class="form-control" id="Lyric" rows="3" name = "Lyric">{{courses.Lyric}}"</textarea>
+     </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
